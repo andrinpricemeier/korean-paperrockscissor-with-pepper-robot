@@ -1,0 +1,15 @@
+topic: ~ask_for_game_topic()
+language: enu
+
+proposal: Do you want to play a game?
+u1: (no) Oh, too bad. Another time then! $agree=0
+u1: (yes) Great! Let's start. $agree=1
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello

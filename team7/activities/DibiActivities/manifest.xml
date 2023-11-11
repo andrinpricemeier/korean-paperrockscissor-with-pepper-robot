@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.2.0" uuid="dibiactivities-246d72">
+ <names>
+  <name lang="en_US">DibiActivities</name>
+ </names>
+ <supportedLanguages>
+  <language>en_US</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="ask_for_game">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">ask_for_game</name>
+   </names>
+   <triggerSentences>
+    <sentence lang="en_US">dibi</sentence>
+    <sentence lang="en_US">play</sentence>
+    <sentence lang="en_US">Dibidibidip</sentence>
+    <sentence lang="en_US">Let's play</sentence>
+   </triggerSentences>
+   <loadingResponses>
+    <sentence lang="en_US">OK, let's go!</sentence>
+   </loadingResponses>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[(('Launchpad/NumPeopleZone1' > 0) ~ 5) && ('Launchpad/PreviousActivity' !=
+"dibiactivities-246d72/ask_for_game")]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="opponent_to_play">
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">opponent_to_play</name>
+   </names>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[(('Launchpad/NumPeopleZone2' > 0) ~ 5) && ('Launchpad/PreviousActivity' != "dibiactivities-246d72/opponent_to_play")]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="hey_hey_you">
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">hey_hey_you</name>
+   </names>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[(('Launchpad/NumPeopleZone2' > 0) ~ 5) && ('Launchpad/PreviousActivity' != "dibiactivities-246d72/hey_hey_you")]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="squid_game">
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">squid_game</name>
+   </names>
+   <triggerSentences>
+    <sentence lang="en_US">Squid</sentence>
+    <sentence lang="en_US">Squid Game</sentence>
+    <sentence lang="en_US">Have you heard of Squid Game?</sentence>
+    <sentence lang="en_US">Do you know Squid Game?</sentence>
+   </triggerSentences>
+   <loadingResponses>
+    <sentence lang="en_US">I heard of Squid Game but it doesn't seem as fun as the Dibidibidip Game!</sentence>
+    <sentence lang="en_US">Are you talking about food?</sentence>
+   </loadingResponses>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="hello_world">
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">hello_world</name>
+   </names>
+   <triggerSentences>
+    <sentence lang="en_US">Hello World</sentence>
+   </triggerSentences>
+   <loadingResponses>
+    <sentence lang="en_US">Hello Human</sentence>
+   </loadingResponses>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="wave_detection">
+   <nature>solitary</nature>
+   <names>
+    <name lang="en_US">wave_detection</name>
+   </names>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[('Launchpad/WavingDetection' == 1)
+&& ('Launchpad/PreviousActivity' !="dibiactivities-246d72/waving_detection")]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="rockpaperscissor">
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">rockpaperscissor</name>
+   </names>
+   <triggerSentences>
+    <sentence lang="en_US">Rock</sentence>
+    <sentence lang="en_US">Paper</sentence>
+    <sentence lang="en_US">Scissor</sentence>
+    <sentence lang="en_US">rock paper scissor</sentence>
+   </triggerSentences>
+   <permissions/>
+  </behaviorContent>
+  <behaviorContent path="unlearn_faces">
+   <nature></nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>
